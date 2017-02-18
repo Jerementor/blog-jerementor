@@ -446,12 +446,10 @@
   flex: 0 auto;
   border: 1px solid #747474;
   background-color: #f0ece5;
-  background-image: -webkit-linear-gradient(94deg, #ddd, #ebe8e4);
-  background-image: linear-gradient(356deg, #ddd, #ebe8e4);
+  background-image: -webkit-linear-gradient(94deg, #cacaca, #e7e7e7);
+  background-image: linear-gradient(356deg, #cacaca, #e7e7e7);
   box-shadow: inset 0 -1px 5px -25px hsla(0, 0%, 100%, .45);
-  -webkit-transition: color 200ms ease;
-  transition: color 200ms ease;
-  color: #525252;
+  color: #000;
   text-shadow: 0 -1px 0 hsla(0, 0%, 100%, .89);
   cursor: pointer;
 }
