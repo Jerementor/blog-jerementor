@@ -1,19 +1,21 @@
-
-
 <% @posts.each do |post| %>
-<div class="content-box w-clearfix">
-    <h2><%= link_to(post.title, (post), :class => "blog-title") %></h2>
-   <div>
-   	<span class="blog-author"><%= post.name %><span class="blog-time">Published <%= distance_of_time_in_words(post.created_at, Time.now) %> ago</span></span>
-   </div>
-    <div class="blog-subtitle"><%= post.subtitle %></div>
- 	<%= link_to 'Read More', (post), :class=> 'read-more w-button'%>
+  <div class="content-box w-clearfix">
+     <h2><%= link_to(post.title, (post), :class => "blog-title") %></h2>
+     	<span class="blog-author">
+        <%= post.name %>
+        <span class="blog-time">Published <%= distance_of_time_in_words(post.created_at, Time.now) %> ago
+        </span>
+      </span>
+    <div class="blog-subtitle">
+      <%= post.subtitle %>
     </div>
-  <% end %>
+   	<%= link_to 'Read More', post, :class=> 'read-more w-button'%>
+  </div>
+<% end %>
 
-   <div class="footer">
-       <div class="copyright">Copyright &copy; 2017 Jeremy Alexander</div>
-    </div>
+<div class="footer">
+   <div class="copyright">Copyright &copy; 2017 Jeremy Alexander</div>
+</div>
 
 <% if user_signed_in? %>
   <%= link_to 'New Post', new_post_path %>
