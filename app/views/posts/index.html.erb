@@ -1,11 +1,30 @@
-<div class="content-box w-richtext">
-  <% @posts.each do |post| %>
-    <h2><%= link_to(post.title, (post)) %></h2>
-    <br>
-    <%= post.subtitle %>
+<div class="mobile-nav w-hidden-main w-hidden-medium w-nav" data-animation="default" data-collapse="medium" data-duration="400">
+<div class="mobile-container w-container w-hidden-main w-hidden-medium">
+  <a class="w-nav-brand" href="#"><img class="mobile-img" src="images/jeremy_alexander.jpg">
+  </a>
+  <h2 class="mobile-header">Jeremy Alexander</h2>
+  <nav class="w-nav-menu" role="navigation"><a class="w-nav-link" href="#">Home</a><a class="w-nav-link" href="#">About</a><a class="w-nav-link" href="#">Contact</a>
+  </nav>
+</div>
+</div>
+
+
+<% @posts.each do |post| %>
+<div class="content-box w-clearfix">
+    <h2><%= link_to(post.title, (post), :class => "blog-title") %></h2>
+   <div>
+   	<span class="blog-author"><%= post.name %><span class="blog-time">Published <%= distance_of_time_in_words(post.created_at, Time.now) %> ago</span></span>
+   </div>
+    <div class="blog-subtitle"><%= post.subtitle %></div>
+ 	<%= link_to 'Read More', (post), :class=> 'read-more w-button'%>
+    </div>
   <% end %>
+
+   <div class="footer">
+       <div class="copyright">Copyright 2017 Jeremy Alexander</div>
+    </div>
 
 
 <%= link_to 'New Post', new_post_path %>
-</div>
+
 

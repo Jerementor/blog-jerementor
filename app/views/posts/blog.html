@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--  This site was created in Webflow. http://www.webflow.com -->
-<!--  Last Published: Fri Feb 17 2017 20:02:52 GMT+0000 (UTC)  -->
+<!--  Last Published: Sat Feb 18 2017 04:38:19 GMT+0000 (UTC)  -->
 <html data-wf-page="58a74bf4d963a3a01f62a479" data-wf-site="58a73e27362a7e4c1e72d68d">
 <head>
   <meta charset="utf-8">
@@ -25,8 +25,51 @@
 </head>
 <body>
   <div class="flex-wrapper">
-   
-    
+    <div class="sidebar">
+      <div class="title-wrapper"><img class="blog-image w-preserve-3d" src="images/jeremy_alexander.jpg">
+        <div class="title">Jeremy Alexander</div>
+        <div class="bio">Developer of <strong>games,</strong> <strong>web apps</strong> and <strong>cartoons</strong>
+          <br><em>Avid guitar player &amp; drum enthusiast</em>
+        </div>
+        <div>
+          <div class="newsletter w-form">
+            <form class="e-mail-form w-clearfix" data-name="Email Form" id="email-form" name="email-form">
+              <label class="form-label" for="email">Notify me</label>
+              <input class="submit-field w-input" data-name="Email" id="email" maxlength="256" name="email" placeholder="Enter your email address" required="required" type="email">
+              <input class="submit-button w-button" data-wait="Please wait..." type="submit" value="Submit">
+            </form>
+            <div class="w-form-done">
+              <div>Thank you! Your submission has been received!</div>
+            </div>
+            <div class="w-form-fail">
+              <div>Oops! Something went wrong while submitting the form</div>
+            </div>
+          </div>
+          <div class="social-icons"><img class="social-icon w-preserve-3d" sizes="(max-width: 767px) 100vw, 55px" src="images/YouTube-icon-full_color.png" srcset="images/YouTube-icon-full_color-p-500x353.png 500w, images/YouTube-icon-full_color-p-800x564.png 800w, images/YouTube-icon-full_color.png 1024w" width="55"><img class="social-icon" src="images/coach_logo.svg" width="105"><img class="social-icon" src="images/In-2C-34px-R.png" width="55">
+          </div>
+        </div>
+        <div class="copyright cr-sidebar">Copyright 2017 Jeremy Alexander</div>
+      </div>
+    </div>
+    <div class="main-content">
+      <div class="mobile-nav w-hidden-main w-hidden-medium w-nav" data-animation="default" data-collapse="medium" data-duration="400">
+        <div class="mobile-container w-container w-hidden-main w-hidden-medium">
+          <a class="w-nav-brand" href="#"><img class="mobile-img" src="images/jeremy_alexander.jpg">
+          </a>
+          <h2 class="mobile-header">Jeremy Alexander</h2>
+          <nav class="w-nav-menu" role="navigation"><a class="w-nav-link" href="#">Home</a><a class="w-nav-link" href="#">About</a><a class="w-nav-link" href="#">Contact</a>
+          </nav>
+        </div>
+      </div>
+      <div class="content-box w-clearfix"><a class="blog-title" href="#">Text Link</a>
+        <div><span class="blog-author">By Jeremy Alexander<span class="blog-time"> Posted 4 Days Ago</span></span>
+        </div>
+        <div class="blog-subtitle">The subtitle goes here. It's just a bit of info about the post. The subtitle goes here. It's just a bit of info about the post. The subtitle goes here. It's just a bit of info about the post...</div><a class="read-more w-button" href="#">Read More</a>
+      </div>
+      <div class="footer">
+        <div class="copyright">Copyright 2017 Jeremy Alexander</div>
+      </div>
+    </div>
   </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js" type="text/javascript"></script>
   <script src="js/webflow.js" type="text/javascript"></script>
