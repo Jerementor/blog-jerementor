@@ -13,8 +13,10 @@
     <%= render 'layouts/sidebar' %>
     <div class="main-content">
       <div class="w-container">
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
+        <% if user_signed_in? %>
+          <p class="notice"><%= notice %></p>
+          <p class="alert"><%= alert %></p>
+        <% end %>
     <%= yield %>
    </div>
    </div>
