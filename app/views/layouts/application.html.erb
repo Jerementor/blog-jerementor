@@ -13,6 +13,18 @@
     <%= render 'layouts/sidebar' %>
     <div class="main-content">
       <div class="w-container">
+        <div class="mobile-nav w-hidden-main w-hidden-medium w-nav" data-animation="default" data-collapse="medium" data-duration="400">
+        <div class="mobile-container w-container w-hidden-main w-hidden-medium">
+          <a class="w-nav-brand" href="#">
+            <%= image_tag("jeremy_alexander.jpg", :class => "mobile-img") %>
+          </a>
+          <h2 class="mobile-header">Jeremy Alexander</h2>
+          <nav class="w-nav-menu" role="navigation"><a class="w-nav-link" href="#">Home</a><a class="w-nav-link" href="#">About</a><a class="w-nav-link" href="#">Contact</a>
+          </nav>
+        </div>
+        </div>
+
+
         <% if user_signed_in? %>
           <p class="notice"><%= notice %></p>
           <p class="alert"><%= alert %></p>
