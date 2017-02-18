@@ -15,11 +15,9 @@
  *= require_self
  */
 
-@import url('https://fonts.googleapis.com/css?family=PT+Sans')
+@import url('https://fonts.googleapis.com/css?family=PT+Sans');
 @import url('https://fonts.googleapis.com/css?family=PT+Serif');
 
-html{
-	font-family: 'PT Sans', sans-serif;
-}
+
 
 
