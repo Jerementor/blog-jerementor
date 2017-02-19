@@ -236,10 +236,10 @@
   padding: 6px;
   border: 5px none #fff;
   border-radius: 50%;
-  -webkit-transition: -webkit-transform 200ms ease;
-  transition: -webkit-transform 200ms ease;
-  transition: transform 200ms ease;
-  transition: transform 200ms ease, -webkit-transform 200ms ease;
+  -webkit-transition: -webkit-transform 200ms cubic-bezier(.19, 1, .22, 1);
+  transition: -webkit-transform 200ms cubic-bezier(.19, 1, .22, 1);
+  transition: transform 200ms cubic-bezier(.19, 1, .22, 1);
+  transition: transform 200ms cubic-bezier(.19, 1, .22, 1), -webkit-transform 200ms cubic-bezier(.19, 1, .22, 1);
 }
 
 .blog-image:hover {
@@ -336,7 +336,7 @@
 .submit-field {
   width: 203px;
   margin-top: 10px;
-  margin-left: -80px;
+  margin-left: 0px;
   font-family: 'PT Sans', sans-serif;
   text-align: left;
 }
@@ -576,6 +576,22 @@
   background-image: -webkit-linear-gradient(89deg, #0084e9, #0091ff 14%);
   background-image: linear-gradient(1deg, #0084e9, #0091ff 14%);
   cursor: pointer;
+}
+
+.jerementor-form {
+  margin-top: 22px;
+  margin-bottom: 22px;
+  border-style: none none solid;
+  border-bottom-width: 1px;
+  border-bottom-color: #ececec;
+  -webkit-transition: font-size 100ms ease;
+  transition: font-size 100ms ease;
+  font-size: 20px;
+}
+
+.jerementor-form:focus {
+  border-bottom-color: #6d6d6d;
+  font-size: 26px;
 }
 
 @media (max-width: 991px) {

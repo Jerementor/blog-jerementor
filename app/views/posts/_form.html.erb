@@ -1,3 +1,4 @@
+<div class="content-box w-clearfix">
 <%= form_for(post) do |f| %>
   <% if post.errors.any? %>
     <div id="error_explanation">
@@ -12,26 +13,28 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %>
-    <%= f.text_field :name %>
+    <%= f.text_field :name, placeholder: 'Name of author', :class => 'jerementor-form' %>
   </div>
 
   <div class="field">
-    <%= f.label :title %>
-    <%= f.text_field :title %>
+    <%= f.text_field :title, placeholder: 'Title of post', :class => 'jerementor-form' %>
   </div>
 
   <div class="field">
-    <%= f.label :subtitle %>
-    <%= f.text_field :subtitle%>
+    <%= f.text_field :subtitle, placeholder: 'Subtitle', :class => 'jerementor-form'%>
   </div>
 
   <div class="field">
-    <%= f.label :content %>
-    <%= f.trix_editor :content%>
+    <%= f.text_field :slug, placeholder: 'URL slug', :class => 'jerementor-form'%>
+  </div>
+
+  <div class="field">
+    <h2>Write here:</h2>
+    <%= f.trix_editor :content, placeholder: 'Content goes here!'%>
   </div>
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit  :class => 'jerementor-button w-button' %>
   </div>
 <% end %>
+</div>
