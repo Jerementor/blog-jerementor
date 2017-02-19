@@ -594,6 +594,11 @@
   font-size: 26px;
 }
 
+.jerementor-form-label {
+  color: #303030;
+  font-size: 17px;
+}
+
 @media (max-width: 991px) {
   .sidebar {
     width: 50%;
