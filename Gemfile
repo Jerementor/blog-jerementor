@@ -14,6 +14,8 @@ gem 'rails', '~> 5.0.1'
 gem 'puma', '~> 3.0'
 # devise for auth
 gem 'devise'
+# friendly id
+gem 'friendly_id', '~> 5.1'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
