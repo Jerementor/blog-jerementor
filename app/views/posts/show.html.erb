@@ -1,7 +1,7 @@
 <div class="content-box">
 <div class="content-wrapper">
   <div class="post-header-row w-clearfix">
-    <h1><%= @post.title %></h1>
+    <h1 class="blog-title"><%= @post.title %></h1>
     <div><span class="blog-author"><%= @post.name %></span> 
     <span class="blog-time">Published <%= distance_of_time_in_words(@post.created_at, Time.now) %> ago
     </span>
