@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Jeremy Alexander</title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+<body>
+<div class="flex-wrap-show">
+    <%= render 'layouts/nav' %>
+    <div class="flex-main-show">
+      <div class="flex-side"></div>
+      <div class="main-content-show">
+         <% if user_signed_in? %>
+          <p class="notice"><%= notice %></p>
+          <p class="alert"><%= alert %></p>
+          <% end %>
+        <%= yield %>
+      </div>
+      <div class="flex-side"></div>
+    </div>
+   </div>
+   </div>
+   </div>
+  </body>
+</html>

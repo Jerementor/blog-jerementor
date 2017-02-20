@@ -1,14 +1,28 @@
-<div class="content-box w-clearfix">
-  <h2 class="blog-title"><%= @post.title %></h2>
-  <div class="blog-subtitle"><%= @post.subtitle %></div>
-  <div class="trix-content">  <%= @post.content.html_safe %></div>
-  <%= link_to 'Back to home', root_path, :class=> 'jerementor-button w-button'%>
+<div class="content-wrapper">
+  <div class="post-header-row w-clearfix">
+    <h1 class="blog-title"><%= @post.title %></h1>
+    <div><span class="blog-author"><%= @post.name %></span> 
+    <span class="blog-time">Published <%= distance_of_time_in_words(@post.created_at, Time.now) %> ago
+    </span>
+    </div>
+    <div class="follow-twitter w-widget w-widget-twitter">
+      <iframe src="https://platform.twitter.com/widgets/follow_button.html#screen_name=jerementor&amp;show_count=true&amp;size=l&amp;show_screen_name=true&amp;dnt=true" scrolling="no" frameborder="0" allowtransparency="true" style="border: none; overflow: hidden; width: 100%; height: 28px;"></iframe>
+    </div>
+    <% if user_signed_in? %>
+		<%= link_to 'Edit', edit_post_path(@post) %> |
+		<%= link_to 'Back', posts_path %>
+	<% end %>
+  </div>
+  <div class="subtitle-div">
+    <div class="blog-subtitle"><%= @post.subtitle %></div>
+  </div>
+  <div class="post">
+      <div class="trix-content">
+      	<%= @post.content.html_safe %>
+      </div>
+
+      <%= render 'disqus' %>
+  </div>
 </div>
 
-<div class="content-box w-clearfix">
-	<%= render 'disqus' %>
-</div>
-<% if user_signed_in? %>
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
-<% end %>
+
