@@ -6,7 +6,7 @@
         <span class="blog-time">Published <%= distance_of_time_in_words(post.created_at, Time.now) %> ago
         </span>
       </span>
-    <div class="blog-subtitle">
+    <div class="blog-subtitle blog-index">
       <%= post.subtitle %>
     </div>
    	<%= link_to 'Read More', post, :class=> 'jerementor-button w-button'%>
