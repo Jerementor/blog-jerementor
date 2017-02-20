@@ -1,16 +1,18 @@
 <% @posts.each do |post| %>
-  <div class="content-box w-clearfix">
+  <div class="content-box">
+    <div class="content-wrapper index-wrapper">
      <h2><%= link_to(post.title, (post), :class => "blog-title") %></h2>
      	<span class="blog-author">
         <%= post.name %>
         <span class="blog-time">Published <%= distance_of_time_in_words(post.created_at, Time.now) %> ago
         </span>
       </span>
-    <div class="blog-subtitle blog-index">
-      <%= post.subtitle %>
+      <div class="blog-subtitle blog-index">
+        <%= post.subtitle %>
+      </div>
+   	  <%= link_to 'Read More', post, :class=> 'jerementor-button w-button'%>
     </div>
-   	<%= link_to 'Read More', post, :class=> 'jerementor-button w-button'%>
-  </div>
+   </div>
 <% end %>
 
 <% if user_signed_in? %>

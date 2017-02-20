@@ -11,7 +11,7 @@ class PostsController < ApplicationController
   # GET /posts/1
   # GET /posts/1.json
   def show
-    render :layout => 'post-layout'
+    # render :layout => 'post-layout'
   end
 
   # GET /posts/new

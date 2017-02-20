@@ -1,3 +1,4 @@
+<div class="content-box">
 <div class="content-wrapper">
   <div class="post-header-row w-clearfix">
     <h1><%= @post.title %></h1>
@@ -14,7 +15,7 @@
 		<%= link_to 'Back', posts_path %> |
         <%= link_to 'Destroy', @post, method: :delete, data: { confirm: 'Are you sure?' } %>
 
-	<% end %>
+	   <% end %>
   </div>
   <div class="subtitle-div">
     <div class="blog-subtitle"><%= @post.subtitle %></div>
@@ -23,11 +24,16 @@
       <div class="trix-content">
       	<%= @post.content.html_safe %>
       </div>
+  </div>
+</div>
+</div>
+
+<div class="content-box">
+  <div class="content-wrapper">
       <div class="comments">
         <h2>Comments: </h2>
         <%= render 'disqus' %>
       </div>
   </div>
 </div>
-
 
