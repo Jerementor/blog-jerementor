@@ -1,6 +1,6 @@
 <div class="content-wrapper">
   <div class="post-header-row w-clearfix">
-    <h1 class="blog-title"><%= @post.title %></h1>
+    <h1><%= @post.title %></h1>
     <div><span class="blog-author"><%= @post.name %></span> 
     <span class="blog-time">Published <%= distance_of_time_in_words(@post.created_at, Time.now) %> ago
     </span>
@@ -10,7 +10,10 @@
     </div>
     <% if user_signed_in? %>
 		<%= link_to 'Edit', edit_post_path(@post) %> |
-		<%= link_to 'Back', posts_path %>
+    <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+		<%= link_to 'Back', posts_path %> |
+        <%= link_to 'Destroy', @post, method: :delete, data: { confirm: 'Are you sure?' } %>
+
 	<% end %>
   </div>
   <div class="subtitle-div">
@@ -20,8 +23,10 @@
       <div class="trix-content">
       	<%= @post.content.html_safe %>
       </div>
-
-      <%= render 'disqus' %>
+      <div class="comments">
+        <h2>Comments: </h2>
+        <%= render 'disqus' %>
+      </div>
   </div>
 </div>
 
